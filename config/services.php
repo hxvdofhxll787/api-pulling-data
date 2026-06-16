@@ -35,4 +35,9 @@ return [
         ],
     ],
 
+    'pulling_data' => [
+        'url' => env('WB_API_URL'),
+        'key' => env('WB_API_KEY'),
+    ],
+
 ];
