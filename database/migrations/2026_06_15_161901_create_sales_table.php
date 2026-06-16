@@ -18,7 +18,7 @@ return new class extends Migration
             $table->date('last_change_date');
             $table->string('supplier_article');
             $table->string('tech_size');
-            $table->unsignedBigInteger('barcode');
+            $table->BigInteger('barcode');
             $table->string('total_price');
             $table->string('discount_percent');
             $table->boolean('is_supply');
@@ -35,7 +35,7 @@ return new class extends Migration
             $table->string('for_pay');
             $table->string('finished_price');
             $table->string('price_with_disc');
-            $table->unsignedBigInteger('nm_id');
+            $table->BigInteger('nm_id');
             $table->string('subject');
             $table->string('category');
             $table->string('brand');

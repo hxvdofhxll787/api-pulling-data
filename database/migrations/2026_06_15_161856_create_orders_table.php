@@ -18,14 +18,14 @@ return new class extends Migration
             $table->date('last_change_date');
             $table->string('supplier_article');
             $table->string('tech_size');
-            $table->unsignedBigInteger('barcode');
+            $table->BigInteger('barcode');
             $table->string('total_price');
             $table->unsignedTinyInteger('discount_percent');
             $table->string('warehouse_name');
             $table->string('oblast');
             $table->unsignedBigInteger('income_id')->nullable();
             $table->string('odid')->nullable();
-            $table->unsignedBigInteger('nm_id');
+            $table->BigInteger('nm_id');
             $table->string('subject');
             $table->string('category');
             $table->string('brand');
