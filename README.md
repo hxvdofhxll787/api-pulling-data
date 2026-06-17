@@ -68,7 +68,7 @@ Host: thomas.proxy.rlwy.net\
 Port: 57017\
 Database: railway\
 Username: reviewer\
-Password: StrongPassword123\
+Password: StrongPassword123
 
 Таблицы:
 - incomes
