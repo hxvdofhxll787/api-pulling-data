@@ -61,3 +61,17 @@ docker compose exec app php artisan app:sync-data
 2. Orders
 3. Sales
 4. Stocks
+
+## БД резвернул
+Доступ:\
+Host: thomas.proxy.rlwy.net\
+Port: 57017\
+Database: railway\
+Username: reviewer\
+Password: StrongPassword123\
+
+Таблицы:
+- incomes
+- orders
+- sales
+- stocks
