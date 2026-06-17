@@ -29,7 +29,7 @@ return new class extends Migration
             $table->string('oblast_okrug_name');
             $table->string('region_name');
             $table->unsignedBigInteger('income_id')->nullable();
-            $table->string('sale_id')->unique();
+            $table->string('sale_id');
             $table->string('odid')->nullable();
             $table->string('spp')->nullable();
             $table->string('for_pay');
