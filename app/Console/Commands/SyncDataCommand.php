@@ -33,7 +33,7 @@ class SyncDataCommand extends Command
 
 
         $this->info('Start importing stocks:');
-        $stockImporter->import(now()->subDay()->format('Y-m-d'));
+        $stockImporter->import(now()->format('Y-m-d'));
 
         $this->info('Finished importing data');
 
