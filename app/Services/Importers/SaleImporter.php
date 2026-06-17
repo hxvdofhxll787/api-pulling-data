@@ -3,48 +3,14 @@
 namespace App\Services\Importers;
 
 use App\Models\Sale;
-use App\Services\ApiPullingDataClient;
 
-class SaleImporter
+class SaleImporter extends BaseImporter
 {
-    public function __construct(private ApiPullingDataClient $client) {
+    protected function endpoint(): string {
+        return 'sales';
     }
 
-    public function import(string $dateFrom, string $dateTo): void
-    {
-        $page = 1;
-        $lastPage = 1;
-
-        do {
-            $response = $this->client->getData(
-                'sales',
-                [
-                    'dateFrom' => $dateFrom,
-                    'dateTo' => $dateTo,
-                    'page' => $page,
-                    'limit' => 500,
-                ]
-            );
-
-            $data = $response['data'] ?? [];
-
-            $lastPage = $response['meta']['last_page'];
-
-            $this->save($data);
-
-            echo "Page {$page}/{$lastPage} loaded successfully \n";
-
-            sleep(1);
-
-            $page++;
-
-        } while ($page <= $lastPage);
-    }
-    private function save(array $data): void {
-        if (empty($data)) {
-            return;
-        }
-
+    protected function save(array $data): void {
         Sale::upsert(
             $data,
             ['sale_id'],
