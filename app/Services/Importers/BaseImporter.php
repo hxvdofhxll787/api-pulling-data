@@ -40,6 +40,8 @@ abstract class BaseImporter
 
             echo "Page {$page}/{$lastPage} loaded successfully \n";
 
+            sleep(1);
+
             $page++;
 
         } while ($page <= $lastPage);
