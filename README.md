@@ -12,13 +12,6 @@
 - Sales
 - Stocks
 ## Запуск проекта
-### Клонирование репозитория
-```bash
-git clone url
-```
-```bash
-cd name
-```
 ### Поднять контейнеры
 ```bash
 docker compose up -d --build
